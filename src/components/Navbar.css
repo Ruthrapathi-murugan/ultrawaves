@@ -1,18 +1,13 @@
 /* src/components/Navbar.css */
-
 .navbar {
-    transition: background-color 0.3s; /* Smooth transition for background color */
-  }
-  
-  .navbar:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Darken the background on hover */
+    background-color: #343a40; /* Dark background */
   }
   
   .nav-link {
-    transition: color 0.3s; /* Smooth transition for text color */
+    color: white !important; /* Ensure text is visible */
   }
   
   .nav-link:hover {
-    color: #ffdd57; /* Change text color on hover */
+    color: #adb5bd !important; /* Lighten on hover */
   }
   
