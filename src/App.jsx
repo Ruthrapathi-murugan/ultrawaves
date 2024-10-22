@@ -10,7 +10,7 @@ import Footer from './components/Footer';  // Import Footer component
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import '@fortawesome/fontawesome-free/css/all.min.css';
-
+import Clients from './components/Clients';
 
 function App() {
   return (
@@ -21,7 +21,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/clients" element={<Clients />} />
           <Route path="/contact" element={<Contact />} />
+          
         </Routes>
         <Footer /> {/* Insert Footer component here */}
       </div>

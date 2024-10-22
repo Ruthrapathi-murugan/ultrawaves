@@ -21,7 +21,7 @@ const Footer = () => {
             <ul className="list-unstyled">
               <li><i className="fas fa-map-marker-alt"></i> Coimbatore, Tamil Nadu</li>
               <li><i className="fas fa-phone"></i> +91-9500996626</li>
-              <li><i className="fas fa-envelope"></i> info@ultrawaves.com</li>
+              <li><i className="fas fa-envelope"></i>  ultrawavendt@gmail.com</li>
             </ul>
           </div>
 

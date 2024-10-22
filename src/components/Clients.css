@@ -1,0 +1,20 @@
+/* src/components/Clients.css */
+.clients-container {
+    background-color: #f8f9fa; /* Light background color */
+    padding: 20px 0; /* Top and bottom padding */
+  }
+  
+  .clients-container h1 {
+    color: #343a40; /* Darker text color */
+    margin-bottom: 20px; /* Space below the heading */
+  }
+  
+  .clients-container ul {
+    padding-left: 0; /* Remove default padding from list */
+  }
+  
+  .clients-container li {
+    font-size: 1.2rem; /* Increase font size */
+    color: #495057; /* Medium text color */
+  }
+  
