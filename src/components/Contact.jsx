@@ -1,11 +1,27 @@
 // src/components/Contact.js
 import React from 'react';
+import './Contact.css'; // Optional: Add custom styles
 
 const Contact = () => {
   return (
     <div className="contact-page container my-5">
       <h2 className="text-center">Contact Us</h2>
       <div className="row justify-content-center mt-4">
+        {/* Contact Details */}
+        <div className="col-lg-6">
+          <h4>Get in Touch</h4>
+          <p>
+            <i className="fas fa-map-marker-alt"></i> No. 6/1, Thatcham Thottam, Edayarpalayam, Coimbatore, Tamil Nadu, 641025, India
+          </p>
+          <p>
+            <i className="fas fa-phone"></i> +91-9500996626
+          </p>
+          <p>
+            <i className="fas fa-envelope"></i>ultrawavendt@gmail.com
+          </p>
+        </div>
+
+        {/* Contact Form */}
         <div className="col-lg-6">
           <form>
             <div className="mb-3">

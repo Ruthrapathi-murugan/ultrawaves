@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="container-fluid text-center my-5">
-        <h1 className="display-4">Welcome to Ultrawaves NDT Services</h1>
+        <h1 className="display-4">Welcome to Ultrawave NDT Services</h1>
         <p className="lead">We specialize in providing Non-Destructive Testing (NDT) services to ensure the safety and reliability of your assets.</p>
         
         {/* Image will fill the width of the screen */}

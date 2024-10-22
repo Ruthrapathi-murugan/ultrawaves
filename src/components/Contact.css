@@ -1,0 +1,15 @@
+/* src/components/Contact.css */
+.contact-page h4 {
+    margin-bottom: 1rem;
+    color: #343a40; /* Dark color for headings */
+  }
+  
+  .contact-page p {
+    font-size: 1.1rem; /* Slightly larger text for readability */
+  }
+  
+  .contact-page .fas {
+    margin-right: 8px; /* Space between icon and text */
+    color: #007bff; /* Icon color */
+  }
+  

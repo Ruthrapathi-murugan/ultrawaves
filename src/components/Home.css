@@ -6,4 +6,11 @@
     max-height: 600px; /* Set a max height, adjust as needed */
     object-fit: cover; /* Ensures the image scales without distortion */
   }
-  
+  @font-face {
+    font-family: 'Ultrawave NDT';
+    src: url('path/to/your/font.ttf') format('truetype');
+}
+
+h1 {
+    font-family: 'Ultrawave NDT', sans-serif;
+}

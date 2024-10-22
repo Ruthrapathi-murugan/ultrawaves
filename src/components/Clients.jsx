@@ -31,6 +31,16 @@ const Clients = () => {
         <p className="mt-4">
           In addition, we provide skilled NDT manpower supply and services.
         </p>
+
+        {/* Performance Excellence Content */}
+        <div className="performance-excellence mt-5">
+          <h2 className="display-5">Performance Excellence</h2>
+          <p>
+            We hold ourselves to a very high standard of performance. We prize innovative ideas 
+            and the teamwork it takes to make them realities. We never stop asking ourselves how
+            we can make the customer experience better, and every day, we find an answer.
+          </p>
+        </div>
       </div>
     </div>
   );
