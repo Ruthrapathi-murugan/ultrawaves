@@ -16,7 +16,7 @@ const Home = () => {
 
         {/* Logo and Header Section */}
         <div className="logo-header-container">
-          <img src="/assets/logo.jpeg" alt="Ultrawave Logo" className="logo" />
+        
           <h1  className="home-h1"><b>Welcome to Ultrawave NDT Services</b></h1>
         </div>
 
