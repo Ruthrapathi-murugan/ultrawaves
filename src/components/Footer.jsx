@@ -20,8 +20,14 @@ const Footer = () => {
             <h5>Contact Us</h5>
             <ul className="list-unstyled">
               <li><i className="fas fa-map-marker-alt"></i> Coimbatore, Tamil Nadu</li>
-              <li><i className="fas fa-phone"></i> +91-9500996626</li>
-              <li><i className="fas fa-envelope"></i>  ultrawavendt@gmail.com</li>
+              <li>
+                <i className="fas fa-phone"></i>{' '}
+                <a href="tel:+919500996626" className="text-white">+91-95009-96626</a>
+              </li>
+              <li>
+                <i className="fas fa-envelope"></i>{' '}
+                <a href="mailto:ultrawavendt@gmail.com" className="text-white">ultrawavendt@gmail.com</a>
+              </li>
             </ul>
           </div>
 

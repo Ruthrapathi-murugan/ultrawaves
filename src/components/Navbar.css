@@ -10,4 +10,22 @@
   .nav-link:hover {
     color: #adb5bd !important; /* Lighten on hover */
   }
-  
+  /* src/components/Navbar.css */
+
+.navbar-logo {
+  max-width: 50px; /* Adjust the logo size as needed */
+  height: auto;
+}
+
+.navbar-brand {
+  font-size: 1.25rem; /* Adjust font size of the company name */
+}
+
+.navbar-brand span {
+  color: white; /* Ensure the company name is visible */
+  font-weight: bold;
+}
+
+.me-2 {
+  margin-right: 0.5rem; /* Adds space between the logo and the company name */
+}

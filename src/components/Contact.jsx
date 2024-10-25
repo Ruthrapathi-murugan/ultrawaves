@@ -14,10 +14,12 @@ const Contact = () => {
             <i className="fas fa-map-marker-alt"></i> No. 6/1, Thatcham Thottam, Edayarpalayam, Coimbatore, Tamil Nadu, 641025, India
           </p>
           <p>
-            <i className="fas fa-phone"></i> +91-9500996626
+            <i className="fas fa-phone"></i>{' '}
+            <a href="tel:+919500996626" className="text-decoration-none text-dark">+91-95009-96626</a>
           </p>
           <p>
-            <i className="fas fa-envelope"></i>ultrawavendt@gmail.com
+            <i className="fas fa-envelope"></i>{' '}
+            <a href="mailto:ultrawavendt@gmail.com" className="text-decoration-none text-dark">ultrawavendt@gmail.com</a>
           </p>
         </div>
 

@@ -14,3 +14,32 @@
 h1 {
     font-family: 'Ultrawave NDT', sans-serif;
 }
+
+/* Home.css */
+
+.home-container {
+  text-align: center;
+}
+
+.logo-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  max-width: 100px; /* Adjust the size as per the design */
+  margin-right: 20px;
+}
+
+.home-h1 {
+  font-family: 'Arial', sans-serif; /* Ensure this matches your desired font */
+  font-size: 3rem;
+  font-weight: bold;
+  text-decoration-line: underline;
+  text-decoration-color: red;
+  color: #001E89; /* Use the blue color matching the image you provided */
+  text-transform: uppercase; /* Optional for all caps */
+  letter-spacing: 0.05em;
+}
