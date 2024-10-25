@@ -16,8 +16,8 @@ const Home = () => {
 
         {/* Logo and Header Section */}
         <div className="logo-header-container">
-        
-          <h1  className="home-h1"><b>Welcome to Ultrawave NDT Services</b></h1>
+         
+          <h1  className="home-h1"><b> <img src="/assets/logo.jpeg" alt="Ultrawave Logo" className="logo" />Welcome to Ultrawave NDT Services</b></h1>
         </div>
 
         <p className="lead">We specialize in providing Non-Destructive Testing (NDT) services to ensure the safety and reliability of your assets.</p>
