@@ -3,7 +3,7 @@
 .home-container img {
     width: 100%;
     height: auto;  /* Maintain aspect ratio */
-    max-height: 600px; /* Set a max height, adjust as needed */
+    max-height: 400px; /* Set a max height, adjust as needed */
     object-fit: cover; /* Ensures the image scales without distortion */
   }
   @font-face {
