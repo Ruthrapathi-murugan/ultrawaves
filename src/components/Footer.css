@@ -1,26 +1,263 @@
-/* src/components/Footer.css */
+/* Footer.css - ULTRA WAVES NDT SERVICES Premium Design */
 
-.footer {
-    background-color: #343a40; /* Bootstrap dark background */
+footer {
+  background: linear-gradient(135deg, #0f0f1e 0%, #1a1a3e 50%, #0f2a4e 100%);
+  color: white;
+  padding: 60px 20px 30px;
+  margin-top: 80px;
+  position: relative;
+  overflow: hidden;
+  border-top: 3px solid #00d4ff;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(0, 212, 255, 0.05) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(0, 168, 204, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+footer h5 {
+  color: #00d4ff;
+  font-weight: 800;
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  position: relative;
+  text-transform: uppercase;
+  animation: fadeIn 0.8s ease-out;
+}
+
+footer h5::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #00d4ff, #0099ff);
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+footer .list-unstyled {
+  position: relative;
+  z-index: 1;
+}
+
+footer .list-unstyled li {
+  margin-bottom: 12px;
+  color: #a0d4ff;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+  padding-left: 8px;
+}
+
+footer .list-unstyled li:hover {
+  color: #00d4ff;
+  transform: translateX(5px);
+}
+
+footer .list-unstyled i {
+  color: #00d4ff;
+  margin-right: 12px;
+  font-size: 1.1rem;
+  filter: drop-shadow(0 0 4px rgba(0, 212, 255, 0.4));
+}
+
+footer p {
+  color: #a0d4ff;
+  line-height: 1.8;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+footer a {
+  color: #00d4ff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  position: relative;
+}
+
+footer a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #00d4ff;
+  transition: width 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
+}
+
+footer a:hover {
+  color: #ffffff;
+  filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.5));
+}
+
+footer a:hover::after {
+  width: 100%;
+}
+
+footer .row {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 40px;
+}
+
+footer .col-md-4 {
+  animation: fadeIn 0.8s ease-out both;
+}
+
+footer .col-md-4:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+footer .col-md-4:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+footer .col-md-4:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.social-media {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  animation: fadeIn 0.8s ease-out 0.5s both;
+}
+
+.social-media a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 168, 204, 0.1));
+  border: 2px solid rgba(0, 212, 255, 0.3);
+  border-radius: 50%;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  color: #00d4ff;
+}
+
+.social-media a:hover {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.25), rgba(0, 168, 204, 0.15));
+  border: 2px solid rgba(0, 212, 255, 0.6);
+  transform: scale(1.15) translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
+  color: #ffffff;
+}
+
+.copyright-section {
+  position: relative;
+  z-index: 1;
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 2px solid rgba(0, 212, 255, 0.2);
+  animation: fadeIn 0.8s ease-out 0.6s both;
+}
+
+.copyright-section p {
+  text-align: center;
+  color: #708090;
+  font-size: 0.9rem;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.copyright-section strong {
+  color: #00d4ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  footer {
+    padding: 40px 15px 20px;
   }
-  
-  .footer h5 {
-    color: #ffffff;
+
+  footer h5 {
+    font-size: 1.15rem;
+    margin-bottom: 18px;
   }
-  
-  .footer a {
-    text-decoration: none;
+
+  footer .col-md-4 {
+    margin-bottom: 30px;
   }
-  
-  .footer a:hover {
-    text-decoration: underline;
-  }
-  
-  .footer i {
-    font-size: 1.5rem;
-  }
-  
-  .footer .list-unstyled li {
+
+  footer .list-unstyled li {
+    font-size: 0.9rem;
     margin-bottom: 10px;
   }
-  
+
+  footer p {
+    font-size: 0.85rem;
+  }
+
+  .social-media {
+    gap: 15px;
+    margin: 30px 0;
+  }
+
+  .social-media a {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 30px 10px 15px;
+  }
+
+  footer h5 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  footer .col-md-4 {
+    margin-bottom: 25px;
+  }
+
+  footer .list-unstyled li {
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+
+  footer .row {
+    margin-bottom: 25px;
+  }
+
+  .social-media {
+    gap: 12px;
+    margin: 20px 0;
+  }
+
+  .social-media a {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .copyright-section p {
+    font-size: 0.75rem;
+  }
+}

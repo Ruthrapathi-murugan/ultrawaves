@@ -1,20 +1,605 @@
-/* src/components/Clients.css */
-.clients-container {
-    background-color: #f8f9fa; /* Light background color */
-    padding: 20px 0; /* Top and bottom padding */
+/* Clients.css - ULTRA WAVES NDT SERVICES - Modern Overlay Card Design */
+
+.clients-page {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0f0f1e 0%, #1a1a3e 50%, #0f2a4e 100%);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.clients-page::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 50%, rgba(0, 212, 255, 0.05) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(30, 144, 255, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.clients-header {
+  text-align: center;
+  margin-bottom: 80px;
+  animation: fadeIn 0.8s ease-out;
+  position: relative;
+  z-index: 10;
+}
+
+.clients-title {
+  font-size: 3.8rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background: linear-gradient(135deg, #00d4ff, #0099ff, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: slideInLeft 0.8s ease-out;
+  position: relative;
+}
+
+.clients-title::after {
+  content: '';
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  height: 5px;
+  background: linear-gradient(90deg, #00d4ff, #0099ff, #00d4ff);
+  border-radius: 3px;
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.6);
+}
+
+.clients-subtitle {
+  font-size: 1.4rem;
+  color: #a0d4ff;
+  margin-top: 40px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  animation: slideInRight 0.8s ease-out 0.2s both;
+}
+
+/* Clients Grid */
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Client Card - Modern Overlay Design */
+.client-card {
+  height: 340px;
+  cursor: pointer;
+  animation: fadeIn 0.8s ease-out both;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.client-card:nth-child(1) { animation-delay: 0.1s; }
+.client-card:nth-child(2) { animation-delay: 0.2s; }
+.client-card:nth-child(3) { animation-delay: 0.3s; }
+.client-card:nth-child(4) { animation-delay: 0.4s; }
+.client-card:nth-child(5) { animation-delay: 0.5s; }
+.client-card:nth-child(6) { animation-delay: 0.6s; }
+.client-card:nth-child(7) { animation-delay: 0.7s; }
+.client-card:nth-child(8) { animation-delay: 0.8s; }
+.client-card:nth-child(9) { animation-delay: 0.9s; }
+.client-card:nth-child(10) { animation-delay: 1s; }
+
+.client-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(30, 130, 180, 0.15) 0%, rgba(0, 180, 220, 0.1) 100%);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(0, 212, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 212, 255, 0.1);
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30px 25px;
+  border-radius: 16px;
+}
+
+.client-card:hover .client-card-inner {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 60px rgba(0, 212, 255, 0.3);
+  border: 2px solid rgba(0, 212, 255, 0.6);
+  background: linear-gradient(135deg, rgba(30, 130, 180, 0.25) 0%, rgba(0, 180, 220, 0.15) 100%);
+}
+
+.client-badge {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.4));
+  transition: all 0.3s ease;
+}
+
+.client-card:hover .client-badge {
+  font-size: 4rem;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.client-logo {
+  max-width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 212, 255, 0.1));
+  padding: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  filter: grayscale(70%) brightness(1.1);
+  border: 2px solid rgba(0, 212, 255, 0.2);
+}
+
+.client-card:hover .client-logo {
+  filter: grayscale(0%) brightness(1.3);
+  transform: scale(1.12) rotate(5deg);
+  border: 2px solid rgba(0, 212, 255, 0.6);
+  box-shadow: 0 12px 32px rgba(0, 212, 255, 0.3);
+}
+
+.client-name {
+  color: #00d4ff;
+  font-weight: 900;
+  text-align: center;
+  font-size: 1.15rem;
+  line-height: 1.3;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  text-shadow: 0 2px 8px rgba(0, 212, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.client-card:hover .client-name {
+  color: #ffffff;
+  text-shadow: 0 0 15px rgba(0, 212, 255, 0.6);
+}
+
+/* Overlay Info - Slides up on hover */
+.client-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background: linear-gradient(135deg, #00a8cc 0%, #006994 100%);
+  overflow: hidden;
+  transition: height 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 3px solid rgba(0, 212, 255, 0.5);
+}
+
+.client-card:hover .client-overlay {
+  height: 140px;
+}
+
+.client-description {
+  color: white;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.6;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  margin-bottom: 12px;
+  animation: slideUpText 0.5s ease-out 0.1s both;
+}
+
+.visit-button {
+  background: white;
+  color: #00a8cc;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  border: none;
+  font-size: 0.85rem;
+  animation: slideUpText 0.5s ease-out 0.2s both;
+}
+
+.visit-button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  background: #f0f8ff;
+}
+
+.visit-button:active {
+  transform: scale(0.96);
+}
+
+/* Glow accent line */
+.client-card-inner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #00d4ff, transparent);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.client-card:hover .client-card-inner::before {
+  opacity: 1;
+}
+
+@keyframes slideUpText {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .clients-container h1 {
-    color: #343a40; /* Darker text color */
-    margin-bottom: 20px; /* Space below the heading */
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .clients-container ul {
-    padding-left: 0; /* Remove default padding from list */
+}
+
+/* Performance Excellence Section */
+.performance-excellence {
+  background: linear-gradient(135deg, #1a3a52 0%, #0f2a4e 100%);
+  border-radius: 20px;
+  padding: 70px 50px;
+  margin: 80px 0;
+  color: white;
+  box-shadow: 0 20px 60px rgba(0, 212, 255, 0.15);
+  border: 2px solid rgba(0, 212, 255, 0.2);
+  animation: slideInUp 0.8s ease-out;
+  position: relative;
+  z-index: 10;
+}
+
+.performance-excellence::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(0, 212, 255, 0.08) 0%, transparent 70%);
+  border-radius: 20px;
+}
+
+.excellence-content h2 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-bottom: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  animation: slideInLeft 0.6s ease-out;
+  background: linear-gradient(135deg, #00d4ff, #0099ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.excellence-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 4px;
+  background: linear-gradient(90deg, #00d4ff, #0099ff);
+  border-radius: 2px;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+}
+
+.excellence-points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+  position: relative;
+  z-index: 1;
+}
+
+.point-item {
+  display: flex;
+  gap: 25px;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.08) 0%, rgba(0, 168, 204, 0.05) 100%);
+  padding: 35px;
+  border-radius: 16px;
+  border: 2px solid rgba(0, 212, 255, 0.25);
+  transition: all 0.3s ease;
+  animation: fadeIn 0.8s ease-out both;
+  backdrop-filter: blur(10px);
+}
+
+.point-item:nth-child(1) { animation-delay: 0.3s; }
+.point-item:nth-child(2) { animation-delay: 0.4s; }
+.point-item:nth-child(3) { animation-delay: 0.5s; }
+
+.point-item:hover {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.15) 0%, rgba(0, 168, 204, 0.1) 100%);
+  box-shadow: 0 15px 40px rgba(0, 212, 255, 0.2), inset 0 0 20px rgba(0, 212, 255, 0.1);
+  border: 2px solid rgba(0, 212, 255, 0.5);
+}
+
+.point-icon {
+  font-size: 3rem;
+  flex-shrink: 0;
+  animation: bounce 2s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.5));
+}
+
+.point-item:nth-child(2) .point-icon { animation-delay: 0.2s; }
+.point-item:nth-child(3) .point-icon { animation-delay: 0.4s; }
+
+.point-text h4 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #00d4ff;
+}
+
+.point-text p {
+  font-size: 1.05rem;
+  margin: 0;
+  opacity: 0.95;
+  line-height: 1.7;
+  color: #c0e0ff;
+}
+
+/* NDT Services Text */
+.ndt-services-text {
+  text-align: center;
+  padding: 50px 40px;
+  background: linear-gradient(135deg, rgba(0, 180, 220, 0.1) 0%, rgba(30, 130, 180, 0.1) 100%);
+  border-radius: 16px;
+  border-left: 5px solid #00d4ff;
+  box-shadow: 0 8px 32px rgba(0, 212, 255, 0.1);
+  animation: slideInUp 0.8s ease-out 0.3s both;
+  position: relative;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.ndt-services-text p {
+  font-size: 1.25rem;
+  color: #a0d4ff;
+  line-height: 1.9;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .clients-page {
+    padding: 60px 15px;
   }
-  
-  .clients-container li {
-    font-size: 1.2rem; /* Increase font size */
-    color: #495057; /* Medium text color */
+
+  .clients-header {
+    margin-bottom: 60px;
   }
-  
+
+  .clients-title {
+    font-size: 2.4rem;
+    letter-spacing: 2px;
+  }
+
+  .clients-title::after {
+    width: 200px;
+    bottom: -20px;
+  }
+
+  .clients-subtitle {
+    font-size: 1.1rem;
+    margin-top: 30px;
+  }
+
+  .clients-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-bottom: 60px;
+  }
+
+  .client-card {
+    height: 300px;
+  }
+
+  .client-card-inner {
+    padding: 20px 15px;
+  }
+
+  .client-logo {
+    max-width: 90px;
+    height: 90px;
+  }
+
+  .client-badge {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+
+  .client-name {
+    font-size: 1rem;
+  }
+
+  .client-card:hover .client-overlay {
+    height: 120px;
+  }
+
+  .client-description {
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+  }
+
+  .visit-button {
+    padding: 8px 18px;
+    font-size: 0.75rem;
+  }
+
+  .performance-excellence {
+    padding: 50px 30px;
+    margin: 60px 0;
+  }
+
+  .excellence-content h2 {
+    font-size: 2rem;
+    margin-bottom: 35px;
+  }
+
+  .excellence-points {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .point-item {
+    padding: 25px 20px;
+    gap: 15px;
+  }
+
+  .point-icon {
+    font-size: 2.5rem;
+  }
+
+  .point-text h4 {
+    font-size: 1.2rem;
+  }
+
+  .point-text p {
+    font-size: 0.95rem;
+  }
+
+  .ndt-services-text {
+    padding: 35px 25px;
+  }
+
+  .ndt-services-text p {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .clients-page {
+    padding: 40px 10px;
+  }
+
+  .clients-header {
+    margin-bottom: 40px;
+  }
+
+  .clients-title {
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+  }
+
+  .clients-title::after {
+    width: 150px;
+    height: 4px;
+    bottom: -15px;
+  }
+
+  .clients-subtitle {
+    font-size: 0.95rem;
+    margin-top: 20px;
+  }
+
+  .clients-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+
+  .client-card {
+    height: 280px;
+  }
+
+  .client-card-inner {
+    padding: 15px 12px;
+  }
+
+  .client-logo {
+    max-width: 75px;
+    height: 75px;
+  }
+
+  .client-badge {
+    font-size: 2.5rem;
+  }
+
+  .client-name {
+    font-size: 0.9rem;
+  }
+
+  .client-card:hover .client-overlay {
+    height: 110px;
+  }
+
+  .client-description {
+    font-size: 0.8rem;
+    margin-bottom: 6px;
+  }
+
+  .visit-button {
+    padding: 7px 16px;
+    font-size: 0.7rem;
+  }
+
+  .performance-excellence {
+    padding: 30px 20px;
+    margin: 40px 0;
+    border-radius: 12px;
+  }
+
+  .excellence-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+
+  .point-item {
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .point-icon {
+    font-size: 2rem;
+  }
+
+  .point-text h4 {
+    font-size: 1rem;
+  }
+
+  .point-text p {
+    font-size: 0.85rem;
+  }
+
+  .ndt-services-text {
+    padding: 25px 15px;
+    border-radius: 12px;
+  }
+
+  .ndt-services-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}

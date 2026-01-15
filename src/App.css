@@ -1,27 +1,142 @@
 .App {
   text-align: center;
-
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .home-page, .about-page, .services-page, .contact-page {
-  padding: 20px;
+  padding: 40px 20px;
   text-align: left;
+  flex-grow: 1;
+  background-color: #f8f9fa;
 }
 
-h1, h2 {
-  color: #333;
+h1 {
+  color: #001E89;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+h2 {
+  color: #001E89;
+  font-weight: 700;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #FF0000, #001E89);
+  border-radius: 2px;
+}
+
+h3 {
+  color: #001E89;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+h4 {
+  color: #1a3a8a;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  font-weight: 600;
 }
 
 p {
-  color: #666;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
 }
 
 ul {
   list-style-type: none;
   padding: 0;
+  margin-left: 20px;
 }
 
 li {
-  margin: 5px 0;
+  margin: 12px 0;
+  padding-left: 30px;
+  position: relative;
+  color: #555;
+  line-height: 1.8;
+}
+
+li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #FF0000;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Button styles */
+.btn {
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 12px 30px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #001E89 0%, #0029d4 100%);
+  border: none;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #0029d4 0%, #001E89 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 30, 137, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(-1px);
+}
+
+/* Card styles */
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 30, 137, 0.2);
+}
+
+.card-body {
+  padding: 25px;
+}
+
+.card-title {
+  color: #001E89;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.card-text {
+  color: #666;
+  line-height: 1.8;
 }

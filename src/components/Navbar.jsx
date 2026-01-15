@@ -8,8 +8,8 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
       <div className="container-fluid">
         <Link className="navbar-brand d-flex align-items-center" to="/">
-          <img src="/assets/logo.jpeg" alt="Ultrawave NDT Logo" className="navbar-logo me-2" />
-          <span>Ultrawave NDT Services</span> {/* Company name next to logo */}
+          <img src="/assets/logo.jpeg" alt="ULTRA WAVES NDT Services Logo" className="navbar-logo me-2" />
+          <span>ULTRA WAVES NDT SERVICES</span> {/* Company name next to logo */}
         </Link>
         <button 
           className="navbar-toggler" 

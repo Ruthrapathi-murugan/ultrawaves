@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="row">
           {/* Company Info */}
           <div className="col-md-4">
-            <h5>Ultrawaves NDT Services</h5>
+            <h5>ULTRA WAVES NDT SERVICES</h5>
             <p>
               We specialize in providing Non-Destructive Testing services to ensure the safety and reliability of your assets.
             </p>
@@ -31,11 +31,12 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Proprietor Info */}
+          {/* Company Details */}
           <div className="col-md-4">
-            <h5>Proprietor</h5>
+            <h5>Company Details</h5>
             <ul className="list-unstyled">
-              <li><strong>Mr. Dheenadhayalan</strong></li>
+              <li><strong>Proprietor: Mr. Dheenadhayalan</strong></li>
+              <li>GST No: 33AXYPD3744M2ZX</li>
               <li>No. 6/1, Thatcham Thottam, Edayarpalayam</li>
               <li>Coimbatore, Tamil Nadu, 641025, India</li>
             </ul>
@@ -60,7 +61,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="text-center mt-3">
-          <p>&copy; {new Date().getFullYear()} Ultrawaves NDT Services. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} ULTRA WAVES NDT SERVICES. All rights reserved.</p>
         </div>
       </div>
     </footer>
