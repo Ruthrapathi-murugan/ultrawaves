@@ -11,7 +11,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import Clients from './components/Clients';
-
+import WhatsAppButton from './components/WhatsAppButton';
 function App() {
   return (
     <Router>
@@ -26,6 +26,7 @@ function App() {
           
         </Routes>
         <Footer /> {/* Insert Footer component here */}
+        <WhatsAppButton />
       </div>
     </Router>
   );
